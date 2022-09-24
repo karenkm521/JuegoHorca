@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width"> 
+        <title>Juego del Ahorcado</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="ahorcado.css">
+        <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            
+            <div class="logo"> 
+                <img src="imagenes/e-02.png" class="imagenEstrella" alt="Placa de sheriff">
+                <div class="nombre">
+                    <h1>El Juego del Ahorcado</h1>
+          
+                </div>
+            <img src="imagenes/alura.png" class="imagenAlu" alt="logo Alura">
+            
+            </div>
+           
+                
+        </header>
+        <main>
+            <div class="botonesInicio" id="inicioJuego">
+                <img src="imagenes/categorialetrero-06.png" class="letrero">
+                <ul class="categorias">
+                    <li><input class="animales" type="image" src="imagenes/categoria-01.png" id="animalesC" onclick="seleccionAnimales()"></li>
+                    <li><input class="frutas" type="image" src="imagenes/categoria-02.png" id="frutasC" onclick="seleccionFrutas()"></li>
+                    <li><input class="verduras" type="image" src="imagenes/categoria-03.png" id="animalesC" onclick="seleccionVerduras()"></li>
+                    <li><input class="programacion" type="image" src="imagenes/categoria-04 .png" id="programacionC" onclick="seleccionProgramacion()"></li>
+                    <li><input id="botonAgregarPalabra" type="image" src="imagenes/agregarPalabra.png" onclick="llamarPanelagrgarPalabra()"></li>
+                </ul>
+            </div>
+
+                    <div class="panelIngresaPalabra" id="nuevaPalabra">
+
+                        <input class="ingresarTexto" type="text"  id="palabraAgregada" placeholder="Ingrese una palabra" autocomplete="off" spellcheck="false">
+                        <input id="agregarPalabra" type="image" src="imagenes/agregarPalabra.png" onclick="agregarPalabra()">
+                        <input id="jugar" type="image" src="imagenes/jugar-13.png" onclick="seleccionpersonalizada()" >
+                    </div>
+
+
+
+
+            </div>
+            <div id="aparece">
+                <p id="palabraAdivinar">
+                    
+                </p>
+                <img id="muneco" src="imagenes/muneco0.png" class="muneco" alt="ahorcado">
+                <div class="botonesLetras" id="bottonLetras">
+                     
+                    <input id="a" type="image" src="imagenes/a.png" onclick="clickBotones('a')">
+                    <input id="e" type="image" src="imagenes/e.png" onclick="clickBotones('e')">
+                    <input id="i" type="image" src="imagenes/i.png" onclick="clickBotones('i')">
+                    <input id="o" type="image" src="imagenes/o.png" onclick="clickBotones('o')">
+                    <input id="u" type="image" src="imagenes/u.png" onclick="clickBotones('u')">
+
+                
+                    <input id="b" type="image" src="imagenes/b.png"  onclick="clickBotones('b')">
+                    <input id="c" type="image" src="imagenes/c.png"  onclick="clickBotones('c')">
+                    <input id="d" type="image" src="imagenes/d.png"  onclick="clickBotones('d')">
+                    <input id="f" type="image" src="imagenes/f.png"  onclick="clickBotones('f')">
+                    <input id="g" type="image" src="imagenes/g.png"  onclick="clickBotones('g')">
+                
+                    <input id="h" type="image" src="imagenes/h.png"  onclick="clickBotones('h')">
+                    <input id="j" type="image" src="imagenes/j.png"  onclick="clickBotones('j')">
+                    <input id="k" type="image" src="imagenes/k.png"  onclick="clickBotones('k')">
+                    <input id="l" type="image" src="imagenes/l.png"  onclick="clickBotones('l')">
+                    <input id="m" type="image" src="imagenes/m.png"  onclick="clickBotones('m')">
+
+                    <input id="n" type="image" src="imagenes/n.png"  onclick="clickBotones('n')">
+                    <input id="p" type="image" src="imagenes/p.png"  onclick="clickBotones('p')">
+                    <input id="q" type="image" src="imagenes/q.png"  onclick="clickBotones('q')">
+                    <input id="r" type="image" src="imagenes/r.png"  onclick="clickBotones('r')">
+                    <input id="s" type="image" src="imagenes/s.png"  onclick="clickBotones('s')">
+
+                    <input id="t" type="image" src="imagenes/t.png"  onclick="clickBotones('t')">
+                    <input id="v" type="image" src="imagenes/v.png"  onclick="clickBotones('v')">
+                    <input id="w" type="image" src="imagenes/w.png"  onclick="clickBotones('w')">
+                    <input id="x" type="image" src="imagenes/x.png"  onclick="clickBotones('x')">
+                    <input id="y" type="image" src="imagenes/y.png"  onclick="clickBotones('y')">
+                
+                    <input id="z" type="image" src="imagenes/z.png"  onclick="clickBotones('z')">
+                    <div>
+                    <ul class="botones2">
+                        <li>
+                            <input class="juegoNuevo" type="image" src="imagenes/juegoNuevo.png" onclick="escojerPalabraSecretaNueva()">
+                                
+                        </li>
+                        <li>
+                            <input class="desistir" type="image" src="imagenes/desisitir.png" onclick="vamosDeNuevo()">
+                        </li>
+                    </ul>
+                    </div>
+                </div> 
+               
+                    
+            </div>
+            <div id="ganar">
+                <img src="imagenes/gano.png" alt="Letreo de ganaste">
+                <input id="palabraNueva" type="image" src="imagenes/nuevaPalabra.png" onclick="deNuevo()">
+                <input id="botonCategorias" type="image" src="imagenes/categoria.png" onclick="home()" >
+
+            </div>
+
+            <div id="perder">
+                <img src="imagenes/gameOver.png" alt="Letreo de Gamer Over" id="gamerOver">
+                <input id="palabraNueva" type="image" src="imagenes/nuevaPalabra.png" onclick="deNuevo()">
+                <input id="botonCategorias" type="image" src="imagenes/categoria.png" onclick="home()" >
+
+            </div>
+
+        </main>
+
+        <footer>
+    
+            <img src="imagenes/dinamita-11.png"  alt="dinamita" class="dinamita">
+            <h1 id="karen">Elaborado por: Karen Martínez Florentino.</h1>
+            <a class="linke" href="https://www.linkedin.com/in/karen-martinez-052785246/" > <img src="imagenes/linke2.png" ></a>
+            <a class="insta" href="https://www.instagram.com/karenkm521/" > <img src="imagenes/insta.png" ></a>
+            <a class="referencias" href="referencias.html" > Recursos graficos</a>            
+               
+        </footer>       
+       
+        <script src="ahorcado.js"></script>
+    </body>
+</html>
